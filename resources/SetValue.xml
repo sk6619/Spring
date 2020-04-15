@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!-- 配置bean
+    scope:表示对象的作用域singleton/propertype/request/session/application/websocket
+     set注入：java普通类型和String类型
+     对象无set方法会报错
+     --> 
+<!-- <bean id="dog" class="com.sk.spring.setvalue.imple.Dog" scope="singleton">
+	<property name="name" value="小黄"></property>
+	<property name="age" value="20"></property>
+</bean> -->
+
+<!-- 构造器注入 
+需要对象有带参数的构造器
+-->
+<!-- <bean id="dog" class="com.sk.spring.setvalue.imple.Dog">
+	<constructor-arg name="nameString" value="小黑"></constructor-arg>
+	<constructor-arg name="ageInteger" value="10"></constructor-arg>
+</bean> -->
+<!-- 引用类型注入
+ref="bean的id" 
+或者：
+-->
+<bean id="dog" class="com.sk.spring.setvalue.imple.Dog" scope="singleton" autowire="byType">
+	<property name="name" value="小黄"></property>
+	<property name="age" value="20"></property>
+</bean>
+<bean id="cat1" class="com.sk.spring.setvalue.imple.Cat">
+	<property name="nmaeString" value="猫"></property>
+	<property name="ageInteger" value="2"></property>
+</bean>
+        
+</beans>

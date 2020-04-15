@@ -1,5 +1,6 @@
-package com.sk.beanscope.impl;
-import com.sk.beanscope.Service;
+package com.sk.spring.beanscope.impl;
+import com.sk.spring.beanscope.Service;
+
 public class ServiceImple implements Service {
 	//如果没有无参数构造方法Spring实例化bean报错
 	public ServiceImple() {

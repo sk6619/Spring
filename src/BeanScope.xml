@@ -7,6 +7,6 @@
     <!-- 配置bean
     scope:表示对象的作用域singleton/propertype/request/session/application/websocket
      --> 
-<bean id="serviceimpl" class="com.sk.beanscope.impl.ServiceImple" scope="prototype"></bean>
+<bean id="serviceimpl" class="com.sk.spring.beanscope.impl.ServiceImple" scope="prototype"></bean>
         
 </beans>

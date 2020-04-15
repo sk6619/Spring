@@ -1,11 +1,11 @@
-package com.sk.beanscope.test;
+package com.sk.spring.beanscope.test;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.sk.beanscope.impl.ServiceImple;
+import com.sk.spring.beanscope.impl.ServiceImple;
 
 public class BeanScopeTest {
 	// 实例化容器

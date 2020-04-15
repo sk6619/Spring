@@ -1,4 +1,4 @@
-package com.sk.beanscope;
+package com.sk.spring.beanscope;
 
 /**
  * 业务接口

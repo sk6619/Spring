@@ -1,4 +1,4 @@
-package com.other;
+package com.other.jdkproxy;
 
 import java.util.HashMap;
 import java.util.Map;

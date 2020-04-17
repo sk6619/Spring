@@ -1,0 +1,16 @@
+1：cglib目标类必须能够被继承Apple类
+2：通过重写子类来实现对目标代理功能的增强
+3：子类就是代理类
+
+步骤：
+1:编写一个apple类
+2:写一个方法拦截器myMethodInterceptor
+3		//创建enhancer对象
+		Enhancer enhancer = new Enhancer();
+4		//设置enhancer对象的父类
+		enhancer.setSuperclass(Apple.class);
+5		//设置enhancer回调对象
+		enhancer.setCallback(new myMethodInterceptor());
+6		//创建代理对象
+		Apple proxApple = (Apple) enhancer.create();
+		proxApple.pick();

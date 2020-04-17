@@ -1,5 +1,4 @@
-package com.other;
-
+package com.other.jdkproxy;
 
 public class Dog implements Animal,Cloneable{
 	String name;

@@ -1,0 +1,23 @@
+1:创建业务接口和实现类，增加其功能
+	Service Serviceiml
+2:新建切面类
+	类上加入注解@Aspect
+		@Aspect
+		public class MyAspect {
+
+		}
+	在类中编写方法，增加的功能、加入通知注解如@before
+			/**
+	 * 方法格式：public 
+	 * 方法参数：有限制
+	 * 方法返回值：void（环绕通知除外）
+	 */
+	@Before(value = "excution(com.sk.spring.aop.Service.doService())")
+	public void doLog() {
+		//打印日志，目标方法之前
+		System.out.println("打印日志"+new Date());
+	}
+3:配置文件
+	声明目标对象
+	声明切面对象
+	（用注解）

@@ -12,7 +12,7 @@ public class myMethodInterceptor implements MethodInterceptor{
 	//该方法就是对代理目标的增强
 	/**
 	 * obj:代理目标
-	 * method:被代理对象的方法
+	 * method:代理目标的方法
 	 * objects:方法参数
 	 * prox:代理方法duixiang
 	 * return:返回一个代理对象

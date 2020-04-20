@@ -22,8 +22,6 @@ public class TestAop {
 			System.out.println(string);
 		}
 		Service service =  context.getBean(Service.class);
-		MyAspect myAspect = context.getBean(MyAspect.class);
-		System.out.println(myAspect.getClass().getName());
 		System.out.println(service.getClass().getName());
 		service.doService();
 	}

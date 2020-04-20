@@ -12,6 +12,16 @@
     
     <!-- 声明组件扫描器 -->
 	<context:component-scan base-package="com.sk.spring.aop" />
-	<!-- 打开代理生成器 -->
-	<aop:aspectj-autoproxy/>
+	<!-- 打开代理生成器  true表示用cglib代理-->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	
+	<!-- 配置式的aop -->
+	<!-- <bean id="myAspect" class="com.sk.spring.aop.aspect.MyAspect"></bean> -->
+	<!-- <aop:config>
+		<aop:pointcut expression="execution(* *..ServiceImpl.doService())" id="my"/>
+		ref="切面类对象"
+		<aop:aspect ref="myAspect">
+			<aop:after method="configLog" pointcut-ref="my"/>
+		</aop:aspect>
+	</aop:config> -->
 </beans>
